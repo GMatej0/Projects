@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="video/icon.png">
+    <title>Christmas countdown</title>
+</head>
+
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="video/xmas.mp4" type="video/mp4">
+    </video>
+    <div class="holder">
+        <h1>Christmas Countdown</h1>
+        <div class="dates-container">
+            <div class="date-left">
+                <div class="left-days"></div>
+                <p>days</p>
+            </div>
+            <div class="date-left">
+                <div class="left-hours"></div>
+                <p>hours</p>
+            </div>
+            <div class="date-left">
+                <div class="left-minutes"></div>
+                <p>minutes</p>
+            </div>
+            <div class="date-left">
+                <div class="left-seconds"></div>
+                <p>seconds</p>
+            </div>
+        </div>
+        <h2 class="happy"></h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

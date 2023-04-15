@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.head {
+  max-width: 480px;
+  border: 2px solid #a6a6a6;
+  margin: 5px auto 5px auto;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Orbitron", sans-serif;
+  color: #333;
+}
+
+.score {
+  margin-top: 10px;
+}
+
+#msg {
+  margin-top: 10px;
+}
+
+.container {
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 1rem;
+  margin: auto;
+  padding: 20px;
+  background-color: lightskyblue;
+  border-radius: 5px;
+}
+
+.cell div {
+  height: 130px;
+  border-radius: 5px;
+}
+
+.cell {
+  position: relative;
+  cursor: pointer;
+}
+
+.front {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #a6a6a6;
+  background-color: #f2f2f2;
+  transform: rotateY(90deg);
+}
+
+.back {
+  background-color: #ffe83a;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+.flip {
+  transform: rotateY(0deg);
+}
+
+.match {
+  transform: rotateY(0deg);
+}
+
+.show {
+  transform: rotateY(0deg);
+}
+
+@media screen and (min-width: 770px) {
+  .head {
+    max-width: 760px;
+  }
+
+  .container {
+    grid-template-columns: repeat(4, auto);
+  }
+
+  .cell div {
+    height: 170px;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.victory-shake {
+  animation: shake 2s;
+}
